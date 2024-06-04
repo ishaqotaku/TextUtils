@@ -48,11 +48,11 @@ export default function TextForm(props) {
         <div className="mb-3">
           <textarea className="form-control" id="myBox" rows="8" onChange={handleOnChange} value={text} placeholder="Enter your Text Here"></textarea>
         </div>
-          <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>Convert to Uppercase</button>
-          <button className="btn btn-primary mx-2 my-2" onClick={handleLoClick}>Convert to Lowercase</button>
-          <button className="btn btn-primary mx-2 my-2" onClick={handleCaClick}>Convert to Capitalize Case</button>
-          <button className="btn btn-primary mx-2 my-2" onClick={handleESClick}>Remove Extra Spaces</button>
-          <button className="btn btn-primary mx-2 my-2" onClick={handleClClick}>Clear</button>
+          <button className="btn btn-primary mx-2 my-2" disabled={!text.length} onClick={handleUpClick}>Convert to Uppercase</button>
+          <button className="btn btn-primary mx-2 my-2" disabled={!text.length} onClick={handleLoClick}>Convert to Lowercase</button>
+          <button className="btn btn-primary mx-2 my-2" disabled={!text.length} onClick={handleCaClick}>Convert to Capitalize Case</button>
+          <button className="btn btn-primary mx-2 my-2" disabled={!text.length} onClick={handleESClick}>Remove Extra Spaces</button>
+          <button className="btn btn-primary mx-2 my-2" disabled={!text.length} onClick={handleClClick}>Clear</button>
     </div>
     <div className="container my-4">
         <h2>Text Summary</h2>
