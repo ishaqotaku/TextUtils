@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import About from './components/About';
 import Alert from './components/Alert';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 
 
@@ -33,18 +33,22 @@ function App() {
   };
 
   return (
-    <Router>
+    // <Router>
       <div className={`bg-${mode} text-${mode === "light" ? "dark" : "light"}`} data-bs-theme={mode}>
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>
         <Alert alert={alert}/>
         <div className="container my-3">
-          <Routes>
+
+          <TextForm heading="Enter your text to analyze" showAlert={showAlert}/>
+          <About/>
+
+          {/* <Routes>
             <Route path={"/about"} element={<About/>}></Route>
             <Route path={"/"} element={<TextForm heading="Enter your text to analyze" showAlert={showAlert}/>}></Route>
-          </Routes>
+          </Routes> */}
         </div>
       </div>
-    </Router>
+    // </Router>
   );
 }
 
